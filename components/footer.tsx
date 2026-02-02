@@ -55,21 +55,24 @@ const socials = [
 
 export default function Footer() {
     return (
-        <footer className="pb-6 text-foreground">
+        <footer className="pb-10 text-foreground">
             <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-2 gap-6 items-center">
+                <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
                     <div className="flex items-center space-x-4">
-                        <Image src="/logo.jpeg" width={48} height={48} alt="CYC Logo" className="rounded-sm" />
+                        <Image src="/logo.jpeg" width={52} height={52} alt="CYC Logo" className="rounded-lg" />
                         <div>
                             <h3 className="text-xl font-semibold">CYC Dallas Chapter</h3>
                             <p className="text-sm text-muted-foreground">Empowering Dallas&apos;s small business owners.</p>
                         </div>
                     </div>
+                    <div className="rounded-2xl border border-border/70 bg-primary/5 p-6 text-sm text-muted-foreground">
+                        We&apos;re a student-led organization committed to pro-bono consulting and lasting community impact.
+                    </div>
                 </div>
-                <Separator className="my-6" />
-                <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <Separator className="my-8" />
+                <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                     <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Consult Your Community™. All Rights Reserved.</p>
-                    <div className="flex justify-end items-center space-x-4">
+                    <div className="flex flex-wrap items-center gap-2">
                         {socials.map((social, index) => (
                             <Button key={index} variant="ghost" size="icon" asChild>
                                 <Link href={social.href} target="_blank" rel="noopener noreferrer" aria-label={`${social.platform} Link`}>
