@@ -51,25 +51,33 @@ const FAQ_ITEMS = [
 
 export default function FAQ() {
     return (
-        <section id="faq" className="mx-auto max-w-4xl py-20 px-6 lg:px-0 sm:py-24">
+        <section id="faq" className="mx-auto max-w-6xl py-20 px-6 lg:px-0 sm:py-24">
             <FadeIn>
-                <h2 className="text-3xl md:text-4xl text-primary tracking-tight text-center mb-8">Frequently Asked Questions</h2>
-                <Accordion type="single" collapsible>
-                    {FAQ_ITEMS.map((item, index) => (
-                        <AccordionItem key={index} value={`item-${index}`}>
-                            <AccordionTrigger className="hover:no-underline hover:text-primary transition-colors duration-200">
-                                {item.question}
-                            </AccordionTrigger>
-                            <AccordionContent>
-                                <div className="text-muted-foreground space-y-2">
-                                    {item.answer.map((paragraph, pIndex) => (
-                                        <p key={pIndex}>{paragraph}</p>
-                                    ))}
-                                </div>
-                            </AccordionContent>
-                        </AccordionItem>
-                    ))}
-                </Accordion>
+                <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+                    <div className="space-y-4">
+                        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">FAQ</p>
+                        <h2 className="text-3xl md:text-4xl text-primary tracking-tight">Frequently Asked Questions</h2>
+                        <p className="text-muted-foreground">
+                            We know applying or partnering with CYC can come with questions. Here are the answers we hear most often.
+                        </p>
+                    </div>
+                    <Accordion type="single" collapsible className="rounded-2xl border border-border/70 bg-card/80 p-6 shadow-sm">
+                        {FAQ_ITEMS.map((item, index) => (
+                            <AccordionItem key={index} value={`item-${index}`} className="border-border/70">
+                                <AccordionTrigger className="hover:no-underline hover:text-primary transition-colors duration-200">
+                                    {item.question}
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                    <div className="text-muted-foreground space-y-2">
+                                        {item.answer.map((paragraph, pIndex) => (
+                                            <p key={pIndex}>{paragraph}</p>
+                                        ))}
+                                    </div>
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
             </FadeIn>
         </section>
     );

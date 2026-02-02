@@ -61,14 +61,22 @@ export default function VideoTestimonials() {
     return (
         <section id="testimonials" className="w-full max-w-7xl mx-auto px-4 py-24 sm:py-32">
             <FadeIn>
-                <div className="text-center mb-12 space-y-4">
-                    <h2 className="text-3xl text-primary">Our Impact Stories</h2>
-                    <p className="text-muted-foreground">Real experiences from our community</p>
+                <div className="mb-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+                    <div className="space-y-4">
+                        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Impact stories</p>
+                        <h2 className="text-3xl text-primary">Real partners. Real transformation.</h2>
+                        <p className="text-muted-foreground">
+                            Hear directly from the entrepreneurs and nonprofit leaders who partnered with CYC and translated student insight into real-world change.
+                        </p>
+                    </div>
+                    <div className="rounded-2xl border border-border/70 bg-primary/5 p-6 text-sm text-primary">
+                        Community partners share how CYC elevated their strategy, marketing, and operations.
+                    </div>
                 </div>
 
                 <div className="grid gap-8 md:grid-cols-2">
                     {testimonials.map((testimonial) => (
-                        <div key={testimonial.id} className="group relative rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow bg-card">
+                        <div key={testimonial.id} className="group relative overflow-hidden rounded-3xl border border-border/70 bg-card shadow-sm">
                             {activeVideo === testimonial.id ? (
                                 <iframe
                                     className="w-full aspect-video"
@@ -88,12 +96,13 @@ export default function VideoTestimonials() {
                                         height={1080}
                                         priority
                                     />
-                                    <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-20 transition-opacity">
-                                        <div className="rounded-full bg-primary p-4 shadow-lg group-hover:scale-110 transition-transform">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <div className="rounded-full bg-primary/90 p-4 shadow-lg transition-transform group-hover:scale-110">
                                             <Play className="w-4 h-4 sm:w-8 sm:h-8 text-primary-foreground" />
                                         </div>
                                     </div>
-                                    <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                                    <div className="absolute bottom-0 left-0 right-0 p-5">
                                         <h3 className="text-white font-medium text-sm sm:text-lg">{testimonial.title}</h3>
                                     </div>
                                 </button>

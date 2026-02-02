@@ -48,22 +48,25 @@ export default function Navbar() {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b shadow-sm transition-transform duration-300 transform ${show ? "translate-y-0" : "-translate-y-full"}`}
+            className={`fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-white/80 backdrop-blur-md transition-transform duration-300 transform ${show ? "translate-y-0" : "-translate-y-full"}`}
         >
             <nav className="container mx-auto flex items-center justify-between py-3 px-4 lg:px-6" aria-label="Main Navigation">
                 {/* Logo */}
                 <Link href="/#hero" className="flex items-center space-x-3" aria-label="Navigate to home">
-                    <Image src="/logo.jpeg" width={40} height={40} alt="CYC UTD Logo" className="rounded-sm" priority />
-                    <span className="text-xl text-muted-foreground hover:text-primary">Consult your Community</span>
+                    <Image src="/logo.jpeg" width={40} height={40} alt="CYC UTD Logo" className="rounded-lg" priority />
+                    <span className="text-lg font-semibold text-slate-800 hover:text-primary">Consult Your Community</span>
                 </Link>
 
                 {/* Desktop Navigation */}
-                <div className="hidden lg:flex space-x-6">
+                <div className="hidden lg:flex items-center space-x-6">
                     {NAV_LINKS.map(({ title, href, ariaLabel }) => (
                         <Link key={href} href={href} aria-label={ariaLabel} className="text-muted-foreground hover:text-primary transition-colors">
                             {title}
                         </Link>
                     ))}
+                    <Button asChild size="sm" className="rounded-full">
+                        <Link href="/#contact-us">Get in touch</Link>
+                    </Button>
                 </div>
 
                 {/* Mobile Navigation */}
@@ -98,6 +101,9 @@ export default function Navbar() {
                                     {title}
                                 </Link>
                             ))}
+                            <Button asChild onClick={closeMenu}>
+                                <Link href="/#contact-us">Get in touch</Link>
+                            </Button>
                         </div>
                     </SheetContent>
                 </Sheet>
