@@ -41,6 +41,7 @@ const HEADSHOTS_SCALE_2 = [
     "pranishka-jagtap",
     "hansini-routhu",
     "sri-sagiraju",
+    "ayaan-ahmed",
     "aydin-mahmood",
     "likhitsaish-kadiam",
     "srisupraja-vishnubhatla",

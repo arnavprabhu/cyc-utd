@@ -209,7 +209,7 @@ const junior_analysts = [
         major: "Finance",
         graduation_year: 2029,
         linkedin: "https://www.linkedin.com/in/",
-        headshot: "/members/placeholder.jpg",
+        headshot: "/members/ayaan-ahmed.png",
     },
     {
         first_name: "Hansini",
