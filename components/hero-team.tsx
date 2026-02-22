@@ -1,19 +1,38 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
+const SLIDES = ["/GroupPic2026Serious.JPG", "/GroupPic2026Silly.JPG"];
+const INTERVAL_MS = 5000;
+
 const Hero = () => {
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const id = setInterval(() => setIndex((i) => (i + 1) % SLIDES.length), INTERVAL_MS);
+        return () => clearInterval(id);
+    }, []);
+
     return (
         <section id="hero" className="relative min-h-[85vh] flex items-center justify-center overflow-hidden" aria-labelledby="hero-title">
             <div className="absolute inset-0">
-                <Image
-                    src="/GroupPic2026Serious.JPG"
-                    alt="CYC Dallas team 2026"
-                    className="object-cover object-[50%_0%] w-full h-full"
-                    quality={100}
-                    priority
-                    fill
-                />
+                {SLIDES.map((src, i) => (
+                    <div
+                        key={src}
+                        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${i === index ? "opacity-100" : "opacity-0"}`}
+                        aria-hidden="true"
+                    >
+                        <Image
+                            src={src}
+                            alt="CYC Dallas team 2026"
+                            className="object-cover object-[50%_0%] w-full h-full"
+                            quality={100}
+                            priority={i === 0}
+                            fill
+                        />
+                    </div>
+                ))}
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/60 to-transparent" />
             </div>
 
