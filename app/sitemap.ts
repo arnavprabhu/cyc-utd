@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 
 const baseUrl = "https://www.utdcyc.com";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const routes = ["", "/about/", "/services/", "/impact/", "/join/", "/contact/", "/team/"];
     return routes.map((path) => ({
