@@ -82,6 +82,15 @@ const senior_analysts = [
         headshot: "/members/arnay-majumdar.jpeg",
     },
     {
+        first_name: "Ayaan",
+        last_name: "Ahmed",
+        email: "ayaan.ahmed@consultyourcommunity.org",
+        major: "Finance",
+        graduation_year: 2029,
+        linkedin: "https://www.linkedin.com/in/",
+        headshot: "/members/ayaan-ahmed.jpg",
+    },
+    {
         first_name: "Jeslin",
         last_name: "Mathew",
         email: "jeslin.mathew@consultyourcommunity.org",
@@ -201,15 +210,6 @@ const junior_analysts = [
         graduation_year: 2027,
         linkedin: "https://www.linkedin.com/in/",
         headshot: "/members/placeholder.jpg",
-    },
-    {
-        first_name: "Ayaan",
-        last_name: "Ahmed",
-        email: "ayaan.ahmed@consultyourcommunity.org",
-        major: "Finance",
-        graduation_year: 2029,
-        linkedin: "https://www.linkedin.com/in/",
-        headshot: "/members/ayaan-ahmed.png",
     },
     {
         first_name: "Hansini",
