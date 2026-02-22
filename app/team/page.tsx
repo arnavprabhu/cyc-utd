@@ -4,7 +4,9 @@ import SeniorAnalysts from "@/components/senior-analysts";
 import JuniorAnalysts from "@/components/junior-analysts";
 import { executives, senior_analysts, junior_analysts } from "./members";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
     title: "Team",
     description: "Meet the team behind Consult Your Community at UT Dallas.",
 };

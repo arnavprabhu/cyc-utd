@@ -54,8 +54,8 @@ const Hero = () => {
                     </div>
                     <div className="w-full max-w-md space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
                         <div className="space-y-2">
-                            <p className="text-xs uppercase tracking-[0.3em] text-slate-300">Spring 2025 cohort</p>
-                            <h2 className="text-2xl font-semibold">Applications are open</h2>
+                            <p className="text-xs uppercase tracking-[0.3em] text-slate-300">Spring 2026 cohort</p>
+                            <h2 className="text-2xl font-semibold">Applications are closed</h2>
                             <p className="text-sm text-slate-300">
                                 Join a team of analysts, strategists, and builders who deliver measurable results for community partners.
                             </p>

@@ -9,9 +9,12 @@ import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from 
 import Link from "next/link";
 
 const NAV_LINKS = [
-    { title: "Services", href: "/#services", ariaLabel: "View our services" },
-    { title: "Team", href: "/team", ariaLabel: "Meet our team" },
-    { title: "Contact", href: "/#contact-us", ariaLabel: "Contact us" },
+    { title: "About", href: "/about/", ariaLabel: "About us" },
+    { title: "Services", href: "/services/", ariaLabel: "Our services" },
+    { title: "Impact", href: "/impact/", ariaLabel: "Case studies and impact" },
+    { title: "Join", href: "/join/", ariaLabel: "Join the cohort" },
+    { title: "Team", href: "/team/", ariaLabel: "Meet our team" },
+    { title: "Contact", href: "/contact/", ariaLabel: "Contact us" },
     { title: "FAQ", href: "/#faq", ariaLabel: "View FAQs" },
 ];
 
@@ -52,7 +55,7 @@ export default function Navbar() {
         >
             <nav className="container mx-auto flex items-center justify-between py-3 px-4 lg:px-6" aria-label="Main Navigation">
                 {/* Logo */}
-                <Link href="/#hero" className="flex items-center space-x-3" aria-label="Navigate to home">
+                <Link href="/" className="flex items-center space-x-3" aria-label="Navigate to home">
                     <Image src="/logo.jpeg" width={40} height={40} alt="CYC UTD Logo" className="rounded-lg" priority />
                     <span className="text-lg font-semibold text-slate-800 hover:text-primary">Consult Your Community</span>
                 </Link>
@@ -65,7 +68,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <Button asChild size="sm" className="rounded-full">
-                        <Link href="/#contact-us">Get in touch</Link>
+                        <Link href="/contact/">Get in touch</Link>
                     </Button>
                 </div>
 
@@ -102,7 +105,7 @@ export default function Navbar() {
                                 </Link>
                             ))}
                             <Button asChild onClick={closeMenu}>
-                                <Link href="/#contact-us">Get in touch</Link>
+                                <Link href="/contact/">Get in touch</Link>
                             </Button>
                         </div>
                     </SheetContent>

@@ -7,8 +7,8 @@ const Hero = () => {
         <section id="hero" className="relative min-h-[85vh] flex items-center justify-center overflow-hidden" aria-labelledby="hero-title">
             <div className="absolute inset-0">
                 <Image
-                    src="/team-picture-spring2025.png"
-                    alt="CYC Dallas leadership team"
+                    src="/GroupPic2026Serious.JPG"
+                    alt="CYC Dallas team 2026"
                     className="object-cover object-[50%_0%] w-full h-full"
                     quality={100}
                     priority
