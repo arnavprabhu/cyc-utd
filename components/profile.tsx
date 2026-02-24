@@ -58,6 +58,12 @@ const Profile = ({ first_name, last_name, email, major, graduation_year, linkedi
                 src={headshot}
                 alt={`${first_name} ${last_name}`}
                 className={cn("object-cover", headshot && HEADSHOTS_SCALE_2.some((slug) => headshot.includes(slug)) && "scale-[2]")}
+                /*
+                 * ⚡ Bolt Optimization: Lazy load member images to improve initial page load performance,
+                 * as most members are below the fold. This reduces initial bandwidth usage and main thread blocking.
+                 */
+                loading="lazy"
+                decoding="async"
             />
             <AvatarFallback>
                 {first_name[0]}
