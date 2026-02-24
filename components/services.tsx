@@ -16,8 +16,7 @@ const servicesData: Service[] = [
     {
         icon: <ChartBar className="w-5 h-5" />,
         title: "Market Insights",
-        description:
-            "Deliver competitive landscapes, customer discovery, and industry trend analysis to reveal new opportunities.",
+        description: "Deliver competitive landscapes, customer discovery, and industry trend analysis to reveal new opportunities.",
         tags: ["Competitive Analysis", "Industry Trends", "Market Research"],
     },
     {
@@ -29,8 +28,7 @@ const servicesData: Service[] = [
     {
         icon: <BarChart3 className="w-5 h-5" />,
         title: "Data Analysis",
-        description:
-            "Turn raw data into dashboards and insights that enable smarter decisions and efficient operations.",
+        description: "Turn raw data into dashboards and insights that enable smarter decisions and efficient operations.",
         tags: ["Statistics", "Visualization", "Analytics"],
     },
     {
@@ -42,15 +40,13 @@ const servicesData: Service[] = [
     {
         icon: <Megaphone className="w-5 h-5" />,
         title: "Brand Marketing",
-        description:
-            "Shape value propositions, improve digital presence, and activate partnerships that build loyal communities.",
+        description: "Shape value propositions, improve digital presence, and activate partnerships that build loyal communities.",
         tags: ["Branding", "Social Media", "Partnerships"],
     },
     {
         icon: <Settings className="w-5 h-5" />,
         title: "Operational Efficiency",
-        description:
-            "Streamline processes, integrate tools, and optimize resourcing to reduce costs and improve service quality.",
+        description: "Streamline processes, integrate tools, and optimize resourcing to reduce costs and improve service quality.",
         tags: ["Optimization", "Process", "Technology"],
     },
 ];

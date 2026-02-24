@@ -66,7 +66,8 @@ export default function VideoTestimonials() {
                         <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Impact stories</p>
                         <h2 className="text-3xl text-primary">Real partners. Real transformation.</h2>
                         <p className="text-muted-foreground">
-                            Hear directly from the entrepreneurs and nonprofit leaders who partnered with CYC and translated student insight into real-world change.
+                            Hear directly from the entrepreneurs and nonprofit leaders who partnered with CYC and translated student insight into real-world
+                            change.
                         </p>
                     </div>
                     <div className="rounded-2xl border border-border/70 bg-primary/5 p-6 text-sm text-primary">
@@ -86,7 +87,11 @@ export default function VideoTestimonials() {
                                     allowFullScreen
                                 />
                             ) : (
-                                <button onClick={() => setActiveVideo(testimonial.id)} className="w-full relative block">
+                                <button
+                                    onClick={() => setActiveVideo(testimonial.id)}
+                                    className="w-full relative block"
+                                    aria-label={`Play video: ${testimonial.title}`}
+                                >
                                     <Image
                                         src={getYoutubeThumbnailUrl(testimonial.url)}
                                         alt={testimonial.title}
@@ -101,7 +106,7 @@ export default function VideoTestimonials() {
                                         </div>
                                     </div>
                                     <div className="absolute bottom-0 left-0 right-0 p-5">
-                                        <h3 className="text-white font-medium text-sm sm:text-lg">{testimonial.title}</h3>
+                                        <span className="text-white font-medium text-sm sm:text-lg block">{testimonial.title}</span>
                                     </div>
                                 </button>
                             )}

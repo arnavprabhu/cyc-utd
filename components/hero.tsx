@@ -13,7 +13,14 @@ const Hero = () => {
     return (
         <section id="hero" className="relative overflow-hidden bg-slate-950 text-white" aria-labelledby="hero-title">
             <div className="absolute inset-0">
-                <Image src="/hero.webp" alt="Students collaborating on a consulting project" className="object-cover object-[50%_35%]" quality={100} priority fill />
+                <Image
+                    src="/hero.webp"
+                    alt="Students collaborating on a consulting project"
+                    className="object-cover object-[50%_35%]"
+                    quality={100}
+                    priority
+                    fill
+                />
                 <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-900/20" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.35),transparent_55%)]" />
             </div>

@@ -5,8 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
     title: "Our Services",
-    description:
-        "Pro-bono consulting services for Dallas small businesses and nonprofits: market insights, financial planning, growth strategy, and more.",
+    description: "Pro-bono consulting services for Dallas small businesses and nonprofits: market insights, financial planning, growth strategy, and more.",
 };
 
 export default function ServicesPage() {

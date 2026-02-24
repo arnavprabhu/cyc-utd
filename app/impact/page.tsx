@@ -6,8 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
     title: "Case Studies & Impact",
-    description:
-        "See how CYC UT Dallas consultants have helped local small businesses and nonprofits with strategy, growth, and operations.",
+    description: "See how CYC UT Dallas consultants have helped local small businesses and nonprofits with strategy, growth, and operations.",
 };
 
 export default function ImpactPage() {
