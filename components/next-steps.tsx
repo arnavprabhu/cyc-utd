@@ -31,9 +31,7 @@ export default function NextSteps() {
                     <Card className="border-border/70 bg-card/60 transition hover:shadow-md">
                         <CardContent className="p-6">
                             <h3 className="text-lg font-semibold text-primary">For students</h3>
-                            <p className="mt-2 text-sm text-muted-foreground">
-                                Join the cohort, work on real client projects, and develop consulting skills.
-                            </p>
+                            <p className="mt-2 text-sm text-muted-foreground">Join the cohort, work on real client projects, and develop consulting skills.</p>
                             <Button asChild variant="outline" className="mt-4">
                                 <Link href="/join/">Join the cohort</Link>
                             </Button>
