@@ -1,6 +1,7 @@
 from api.core.email import send_email
 from api.models.contact_form import ContactForm
 from fastapi import APIRouter, HTTPException
+import html
 
 router = APIRouter()
 
@@ -20,12 +21,19 @@ EMAIL_TEMPLATES = {
 @router.post("/api/py/contact")
 def submit_contact_form(contact_form: ContactForm):
     try:
+        # Sanitize inputs to prevent HTML injection in emails
+        safe_email = html.escape(contact_form.email)
+        safe_subject = html.escape(contact_form.subject)
+        safe_message = html.escape(contact_form.message)
+
         send_email(contact_form.email, "Thank you for contacting CYC UT Dallas", EMAIL_TEMPLATES["confirmation"])
         send_email(
             "utdallas@consultyourcommunity.org", 
-            contact_form.subject, 
-            EMAIL_TEMPLATES["contact_form"].format(contact_form.email, contact_form.subject, contact_form.message)
+            safe_subject,
+            EMAIL_TEMPLATES["contact_form"].format(safe_email, safe_subject, safe_message)
         )
         return {"message": "Email sent successfully"}
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        # Log the error internally but don't expose details to client
+        print(f"Error processing contact form: {e}")
+        raise HTTPException(status_code=500, detail="Internal Server Error")
