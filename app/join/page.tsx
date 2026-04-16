@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const CONSULTANT_FORM_LINK = "https://forms.gle/QDwYttKHcgveZFxf6";
+const CONSULTANT_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSf6Ip1dYryZFCfbyq-ESQ5OvcppPoN9cGRtRw3AoOcxOyb85g/viewform?usp=dialog";
 
 export const metadata: Metadata = {
     title: "Join Us",
