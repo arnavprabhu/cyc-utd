@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import FadeIn from "@/components/ui/fade-in";
 
 // Changing these links here will also change them in the CallToAction component
-const CONSULTANT_FORM_LINK = "https://forms.gle/QDwYttKHcgveZFxf6";
+const CONSULTANT_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSf6Ip1dYryZFCfbyq-ESQ5OvcppPoN9cGRtRw3AoOcxOyb85g/viewform?usp=dialog";
 const BUSINESS_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSdm1j0TdIj7ii-rArH4o6h9cMcsHe0lsaE0un3yXuoM3Vk9KA/viewform?usp=sf_link";
 
 const Hero = () => {
