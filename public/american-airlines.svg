@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100" viewBox="0 0 300 100" role="img" aria-labelledby="title">
+  <title id="title">American Airlines</title>
+  <rect width="300" height="100" fill="#fff"/>
+  <text x="24" y="48" font-family="Arial, sans-serif" font-size="24" fill="#10233A" font-weight="500">American</text>
+  <text x="24" y="74" font-family="Arial, sans-serif" font-size="24" fill="#10233A" font-weight="500">Airlines</text>
+  <path d="M190 18 L220 18 L278 92 L248 92 Z" fill="#0078D2"/>
+  <path d="M220 18 L250 18 L278 56 L248 56 Z" fill="#00AEEF"/>
+  <path d="M230 50 L255 50 L278 92 L253 92 Z" fill="#E31C3D"/>
+</svg>
