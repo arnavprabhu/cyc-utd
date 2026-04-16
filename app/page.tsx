@@ -4,6 +4,7 @@ import SocialProof from "@/components/socialproof";
 import VideoTestimonials from "@/components/testimonials";
 import NextSteps from "@/components/next-steps";
 import FAQ from "@/components/faq";
+import Network from "@/components/network";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
             <Services />
             <SocialProof />
             <VideoTestimonials />
+            <Network />
             <NextSteps />
             <FAQ />
         </>
