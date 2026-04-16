@@ -12,6 +12,8 @@ type CompanyLogo = {
 
 const COMPANIES: CompanyLogo[] = [
     { name: "AT&T", logo: "/att.svg" },
+    { name: "American Airlines", logo: "/american-airlines.svg" },
+    { name: "Charles Schwab", logo: "/charles-schwab.svg" },
     { name: "Deloitte", logo: "/deloitte.svg" },
     { name: "Goldman Sachs", logo: "/goldman-sachs.svg" },
     { name: "HubSpot", logo: "/hubspot.svg" },
@@ -19,6 +21,7 @@ const COMPANIES: CompanyLogo[] = [
     { name: "Jane Street", logo: "/jane-street.svg" },
     { name: "JP Morgan", logo: "/jp-morgan.svg" },
     { name: "Niantic", logo: "/niantic.svg" },
+    { name: "OpenAI", logo: "/openai.svg" },
     { name: "Paycom", logo: "/paycom.svg" },
     { name: "Snowflake", logo: "/snowflake.svg" },
     { name: "Southwest", logo: "/southwest.svg" },
@@ -43,7 +46,7 @@ export default function Network() {
                 <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
                     <div className="space-y-4">
                         <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Network</p>
-                        <h2 className="text-3xl md:text-4xl text-primary tracking-tight">Where CYC talent goes next</h2>
+                        <h2 className="text-3xl md:text-4xl text-primary tracking-tight">Where our consultants go</h2>
                         <p className="text-muted-foreground max-w-2xl">
                             Our consultants grow into analysts, product leaders, founders, and researchers at top graduate programs and world-class companies.
                         </p>
