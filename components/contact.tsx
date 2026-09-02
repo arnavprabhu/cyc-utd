@@ -18,15 +18,9 @@ function Contact() {
                 label: CONTACT_EMAIL,
             },
             {
-                title: "Join our community",
-                description: "Connect with our consultants and upcoming events.",
-                href: "https://discord.gg/durKeShjyd",
-                label: "Discord community",
-            },
-            {
                 title: "Follow our journey",
                 description: "Stay up to date with project highlights and impact stories.",
-                href: "https://www.linkedin.com/company/consult-your-community-at-utdallas/",
+                href: "https://www.linkedin.com/company/cyc-utd/home/",
                 label: "LinkedIn updates",
             },
         ],
