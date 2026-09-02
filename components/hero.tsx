@@ -1,94 +1,103 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight, Check } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
-import FadeIn from "@/components/ui/fade-in";
 
-// Changing these links here will also change them in the CallToAction component
-const CONSULTANT_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSf6Ip1dYryZFCfbyq-ESQ5OvcppPoN9cGRtRw3AoOcxOyb85g/viewform?usp=dialog";
-const BUSINESS_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSdm1j0TdIj7ii-rArH4o6h9cMcsHe0lsaE0un3yXuoM3Vk9KA/viewform?usp=sf_link";
+const CONSULTANT_FORM_LINK = "https://forms.gle/wS9qoayrUaC7g6Wh6";
+const BUSINESS_FORM_LINK =
+  "https://docs.google.com/forms/d/e/1FAIpQLSdm1j0TdIj7ii-rArH4o6h9cMcsHe0lsaE0un3yXuoM3Vk9KA/viewform?usp=sf_link";
 
-const Hero = () => {
-    return (
-        <section id="hero" className="relative overflow-hidden bg-slate-950 text-white" aria-labelledby="hero-title">
-            <div className="absolute inset-0">
-                <Image
-                    src="/hero.webp"
-                    alt="Students collaborating on a consulting project"
-                    className="object-cover object-[50%_35%]"
-                    quality={100}
-                    priority
-                    fill
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-900/20" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.35),transparent_55%)]" />
-            </div>
+const Hero = () => (
+  <section
+    id="hero"
+    className="relative overflow-hidden pb-20 pt-32 sm:pb-28 sm:pt-40"
+    aria-labelledby="hero-title"
+  >
+    <div className="pointer-events-none absolute -left-40 top-16 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
+    <div className="section-shell relative grid items-center gap-14 lg:grid-cols-[1.04fr_0.96fr] lg:gap-20">
+      <div>
+        <p className="eyebrow">UT Dallas student consultants</p>
+        <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/10 px-3 py-1.5 text-xs font-semibold text-primary">
+          <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
+          Applications are open
+        </div>
+        <h1
+          id="hero-title"
+          className="mt-5 max-w-3xl text-balance text-5xl leading-[0.98] tracking-[-0.045em] text-primary sm:text-6xl lg:text-7xl"
+        >
+          Big ideas for the small businesses that make Dallas{" "}
+          <span className="italic text-primary/70">home.</span>
+        </h1>
+        <p className="mt-7 max-w-xl text-lg leading-8 text-muted-foreground sm:text-xl">
+          We pair ambitious UT Dallas students with local businesses and
+          nonprofits to deliver thoughtful, data-driven consulting—completely
+          pro bono.
+        </p>
+        <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <Button asChild size="lg">
+            <Link
+              href={CONSULTANT_FORM_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apply now <ArrowUpRight aria-hidden="true" />
+            </Link>
+          </Button>
+          <Button variant="outline" asChild size="lg">
+            <Link
+              href={BUSINESS_FORM_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Partner with us
+            </Link>
+          </Button>
+        </div>
+        <div className="mt-9 flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium text-primary/70">
+          {["100% pro bono", "Real client work", "Built for local impact"].map(
+            (item) => (
+              <span key={item} className="flex items-center gap-2">
+                <span className="grid h-5 w-5 place-items-center rounded-full bg-accent/15 text-accent">
+                  <Check className="h-3 w-3" aria-hidden="true" />
+                </span>
+                {item}
+              </span>
+            ),
+          )}
+        </div>
+      </div>
 
-            <FadeIn>
-                <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col justify-center gap-10 px-4 py-20 sm:py-24 lg:flex-row lg:items-center lg:gap-16 lg:px-6">
-                    <div className="max-w-2xl space-y-6">
-                        <p className="text-sm uppercase tracking-[0.4em] text-slate-300">UT Dallas • Consult Your Community</p>
-                        <h1 id="hero-title" className="text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-                            Strategy built with heart, powered by student consultants.
-                        </h1>
-                        <p className="text-base text-slate-200 sm:text-lg">
-                            We partner with Dallas&apos;s small businesses and nonprofits to deliver pro-bono consulting that unlocks growth, impact, and
-                            resilience for local communities.
-                        </p>
-                        <div className="flex flex-col gap-3 sm:flex-row">
-                            <Button asChild className="hover:scale-[1.02] transition-transform">
-                                <Link href={CONSULTANT_FORM_LINK} target="_blank" rel="noopener noreferrer">
-                                    Join the consultant cohort
-                                </Link>
-                            </Button>
-                            <Button variant="secondary" asChild className="hover:scale-[1.02] transition-transform">
-                                <Link href={BUSINESS_FORM_LINK} target="_blank" rel="noopener noreferrer">
-                                    Request consulting support
-                                </Link>
-                            </Button>
-                        </div>
-                        <div className="grid grid-cols-2 gap-4 pt-6 text-sm text-slate-200 sm:max-w-lg">
-                            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                                <p className="text-xl font-semibold text-white">28+</p>
-                                <p className="text-slate-300">CYC chapters nationwide</p>
-                            </div>
-                            <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                                <p className="text-xl font-semibold text-white">100+</p>
-                                <p className="text-slate-300">Small businesses served yearly</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="w-full max-w-md space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-                        <div className="space-y-2">
-                            <p className="text-xs uppercase tracking-[0.3em] text-slate-300">Spring 2026 cohort</p>
-                            <h2 className="text-2xl font-semibold">Applications are closed</h2>
-                            <p className="text-sm text-slate-300">
-                                Join a team of analysts, strategists, and builders who deliver measurable results for community partners.
-                            </p>
-                        </div>
-                        <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-4">
-                            <p className="text-sm text-slate-300">Recent focus areas</p>
-                            <ul className="mt-3 space-y-2 text-sm">
-                                <li className="flex items-center gap-2">
-                                    <span className="h-2 w-2 rounded-full bg-sky-400" />
-                                    Market expansion & competitive insights
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                                    Data dashboards & operations optimization
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <span className="h-2 w-2 rounded-full bg-amber-400" />
-                                    Community-facing brand strategy
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </FadeIn>
-        </section>
-    );
-};
+      <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
+        <div className="absolute -right-5 -top-5 h-full w-full rounded-[2.5rem] border border-primary/15" />
+        <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-primary shadow-[0_30px_70px_-35px_rgba(32,43,93,0.65)] sm:aspect-[5/4] lg:aspect-[4/5]">
+          <Image
+            src="/hero.webp"
+            alt="Downtown Dallas skyline"
+            fill
+            priority
+            className="object-cover object-[52%_50%]"
+            sizes="(max-width: 1024px) 90vw, 45vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 p-7 text-primary-foreground sm:p-9">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/70">
+              Our community
+            </p>
+            <p className="mt-2 max-w-sm font-serif text-2xl leading-tight sm:text-3xl">
+              Local insight. Lasting momentum.
+            </p>
+          </div>
+        </div>
+        <div className="absolute -bottom-7 -left-4 rounded-2xl border border-primary/10 bg-white p-4 shadow-xl sm:-left-8 sm:p-5">
+          <p className="font-serif text-3xl text-primary">28+</p>
+          <p className="mt-1 text-xs font-medium text-muted-foreground">
+            chapters nationwide
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
 
 export { CONSULTANT_FORM_LINK, BUSINESS_FORM_LINK, Hero };
