@@ -2,9 +2,9 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    sendgrid_api_key: str
-    notion_token: str
-    notion_database_id: str
+    sendgrid_api_key: str = ""
+    notion_token: str = ""
+    notion_database_id: str = ""
     cors_origins: str = "http://localhost:3000"
 
     class Config:

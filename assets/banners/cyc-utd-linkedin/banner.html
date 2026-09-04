@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CYC UT Dallas LinkedIn Banner</title>
+    <style>
+      @font-face {
+        font-family: "Geist";
+        src: url("../../../app/fonts/GeistVF.woff") format("woff");
+        font-weight: 100 900;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+
+      .banner {
+        position: relative;
+        width: 4200px;
+        height: 700px;
+        overflow: hidden;
+        background: #28346e;
+        color: #fbfaf6;
+        font-family: "Geist", Arial, sans-serif;
+      }
+
+      .grid {
+        position: absolute;
+        inset: 0;
+        opacity: 0.08;
+        background-image:
+          linear-gradient(rgba(255,255,255,.7) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,.7) 1px, transparent 1px);
+        background-size: 96px 96px;
+      }
+
+      .glow {
+        position: absolute;
+        left: 560px;
+        top: -480px;
+        width: 1500px;
+        height: 1500px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(242, 110, 39, .24), transparent 66%);
+      }
+
+      .arrow-mark {
+        position: absolute;
+        left: -130px;
+        top: 62px;
+        width: 790px;
+        height: 590px;
+        opacity: .13;
+      }
+
+      .orange-rule {
+        position: absolute;
+        left: 1240px;
+        top: 108px;
+        width: 10px;
+        height: 484px;
+        border-radius: 999px;
+        background: #f26e27;
+      }
+
+      .copy {
+        position: absolute;
+        left: 1390px;
+        top: 108px;
+        width: 2600px;
+      }
+
+      .eyebrow {
+        margin: 0 0 54px;
+        color: rgba(251, 250, 246, .7);
+        font-size: 50px;
+        font-weight: 650;
+        letter-spacing: .24em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        color: #fbfaf6;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 188px;
+        font-weight: 400;
+        letter-spacing: -.045em;
+        line-height: .95;
+      }
+
+      h1 em {
+        color: #f3ddcc;
+        font-weight: 400;
+      }
+
+      .mission {
+        margin: 58px 0 0;
+        color: rgba(251, 250, 246, .76);
+        font-size: 58px;
+        font-weight: 420;
+        letter-spacing: -.015em;
+        line-height: 1.25;
+      }
+
+      .proof {
+        position: absolute;
+        right: 210px;
+        bottom: 92px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        color: rgba(251, 250, 246, .62);
+        font-size: 34px;
+        font-weight: 620;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+      }
+
+      .proof::before {
+        content: "";
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #f26e27;
+      }
+
+      .corner {
+        position: absolute;
+        right: -120px;
+        bottom: -410px;
+        width: 980px;
+        height: 980px;
+        border: 4px solid rgba(255,255,255,.11);
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="banner" aria-label="CYC UT Dallas LinkedIn company banner">
+      <div class="grid"></div>
+      <div class="glow"></div>
+      <svg class="arrow-mark" viewBox="0 0 720 540" aria-hidden="true">
+        <path fill="#fff" d="M360 0 720 250H610v290H410V360h-100v180H110V250H0L360 0Z" />
+      </svg>
+      <div class="orange-rule"></div>
+      <section class="copy">
+        <p class="eyebrow">Consult Your Community · UT Dallas</p>
+        <h1>Big ideas. <em>Local impact.</em></h1>
+        <p class="mission">Pro bono consulting for Dallas businesses &amp; nonprofits.</p>
+      </section>
+      <p class="proof">100% pro bono</p>
+      <div class="corner"></div>
+    </main>
+  </body>
+</html>

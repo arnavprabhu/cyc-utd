@@ -21,16 +21,6 @@ const executives = [
         headshot: "/members/akshara-akella.jpg",
     },
     {
-        first_name: "Unaiza",
-        last_name: "Khakoo",
-        email: "Unaiza.khakoo@consultyourcommunity.org",
-        major: "Finance",
-        graduation_year: 2026,
-        linkedin: "https://www.linkedin.com/in/unaizakhakoo/",
-        position: "VP of Finance",
-        headshot: "/members/unaiza-khakoo.jpeg",
-    },
-    {
         first_name: "Arnav",
         last_name: "Prabhu",
         email: "Arnav.Prabhu@consultyourcommunity.org",
@@ -39,16 +29,6 @@ const executives = [
         linkedin: "https://www.linkedin.com/in/arnavprabhu/",
         position: "VP of Tech & Marketing",
         headshot: "/members/arnav-prabhu.jpg",
-    },
-    {
-        first_name: "Rushil",
-        last_name: "Kannery",
-        email: "rushil.kannery@consultyourcommunity.org",
-        major: "Finance",
-        graduation_year: 2027,
-        linkedin: "https://www.linkedin.com/in/rushilkannery/",
-        position: "VP of Client Relations",
-        headshot: "/members/rushil-kannery.jpg",
     },
     {
         first_name: "Anas",
@@ -60,26 +40,15 @@ const executives = [
         position: "VP of Consulting",
         headshot: "/members/anas-hassan.jpg",
     },
-];
-
-const senior_analysts = [
     {
-        first_name: "Varsha",
-        last_name: "Janumpally",
-        email: "varsha.janumpally@consultyourcommunity.org",
-        major: "Information Technology",
-        graduation_year: 2027,
-        linkedin: "https://www.linkedin.com/in/varsha-janumpally/",
-        headshot: "/members/varsha-janumpally.jpeg",
-    },
-    {
-        first_name: "Arnay",
-        last_name: "Majumdar",
-        email: "arnay.majumdar@consultyourcommunity.org",
+        first_name: "Rushil",
+        last_name: "Kannery",
+        email: "rushil.kannery@consultyourcommunity.org",
         major: "Finance",
-        graduation_year: 2028,
-        linkedin: "https://www.linkedin.com/in/arnay-majumdar/",
-        headshot: "/members/arnay-majumdar.jpeg",
+        graduation_year: 2027,
+        linkedin: "https://www.linkedin.com/in/rushilkannery/",
+        position: "Co-VP of Consulting",
+        headshot: "/members/rushil-kannery.jpg",
     },
     {
         first_name: "Ayaan",
@@ -88,26 +57,12 @@ const senior_analysts = [
         major: "Finance",
         graduation_year: 2029,
         linkedin: "https://www.linkedin.com/in/",
+        position: "VP of Client Relations",
         headshot: "/members/ayaan-ahmed.jpg",
     },
-    {
-        first_name: "Jeslin",
-        last_name: "Mathew",
-        email: "jeslin.mathew@consultyourcommunity.org",
-        major: "Supply Chain Management",
-        graduation_year: 2027,
-        linkedin: "https://www.linkedin.com/in/jeslinlizmathew/",
-        headshot: "/members/jeslin-matthew.jpeg",
-    },
-    {
-        first_name: "Kushagra",
-        last_name: "Bharti",
-        email: "kushagra.bharti@consultyourcommunity.org",
-        major: "Computer Science",
-        graduation_year: 2027,
-        linkedin: "https://www.linkedin.com/in/kushagra-bharti/",
-        headshot: "/members/kushagra-bharti.jpeg",
-    },
+];
+
+const senior_analysts = [
     {
         first_name: "Pranav",
         last_name: "Boyapati",
@@ -118,19 +73,6 @@ const senior_analysts = [
         headshot: "/members/pranav-boyapati.jpg",
     },
     {
-        first_name: "Rithik",
-        last_name: "Chowdam",
-        email: "rithik.chowdam@consultyourcommunity.org",
-        major: "Computer Science",
-        graduation_year: 2026,
-        linkedin: "https://www.linkedin.com/in/",
-        headshot: "/members/rithik-chowdam.jpg",
-    },
-];
-
-// Junior analyst team members
-const junior_analysts = [
-    {
         first_name: "Yuvraj",
         last_name: "Kashyap",
         email: "yuvraj.kashyap@consultyourcommunity.org",
@@ -138,15 +80,6 @@ const junior_analysts = [
         graduation_year: 2027,
         linkedin: "https://www.linkedin.com/in/",
         headshot: "/members/yuvraj-kashyap.jpg",
-    },
-    {
-        first_name: "Muhammad",
-        last_name: "Meetheen",
-        email: "muhammad.meetheen@consultyourcommunity.org",
-        major: "Finance",
-        graduation_year: 2028,
-        linkedin: "https://www.linkedin.com/in/",
-        headshot: "/members/placeholder.jpg",
     },
     {
         first_name: "Pranishka",
@@ -158,24 +91,6 @@ const junior_analysts = [
         headshot: "/members/pranishka-jagtap.jpg",
     },
     {
-        first_name: "Manisha",
-        last_name: "Mishra",
-        email: "manisha.mishra@consultyourcommunity.org",
-        major: "Computer Science",
-        graduation_year: 2028,
-        linkedin: "https://www.linkedin.com/in/",
-        headshot: "/members/placeholder.jpg",
-    },
-    {
-        first_name: "Suhaas",
-        last_name: "Gaddala",
-        email: "suhaas.gaddala@consultyourcommunity.org",
-        major: "Computer Science",
-        graduation_year: 2027,
-        linkedin: "https://www.linkedin.com/in/",
-        headshot: "/members/placeholder.jpg",
-    },
-    {
         first_name: "Hansini",
         last_name: "Routhu",
         email: "hansini.routhu@consultyourcommunity.org",
@@ -185,15 +100,6 @@ const junior_analysts = [
         headshot: "/members/hansini-routhu.jpg",
     },
     {
-        first_name: "Sri Samanyu",
-        last_name: "Sagiraju",
-        email: "srisamanyu.sagiraju@consultyourcommunity.org",
-        major: "BUAN",
-        graduation_year: 2027,
-        linkedin: "https://www.linkedin.com/in/",
-        headshot: "/members/sri-sagiraju.jpg",
-    },
-    {
         first_name: "Aydin",
         last_name: "Mahmood",
         email: "aydin.mahmood@consultyourcommunity.org",
@@ -201,15 +107,6 @@ const junior_analysts = [
         graduation_year: 2028,
         linkedin: "https://www.linkedin.com/in/",
         headshot: "/members/aydin-mahmood.jpg",
-    },
-    {
-        first_name: "Likhitsaish",
-        last_name: "Kadiam",
-        email: "likhitsaish.kadiam@consultyourcommunity.org",
-        major: "Finance",
-        graduation_year: 2029,
-        linkedin: "https://www.linkedin.com/in/",
-        headshot: "/members/likhitsaish-kadiam.jpg",
     },
     {
         first_name: "Sri Supraja",
@@ -228,6 +125,19 @@ const junior_analysts = [
         graduation_year: 2027,
         linkedin: "https://www.linkedin.com/in/",
         headshot: "/members/rakeen-virani.jpg",
+    },
+];
+
+// Junior analyst team members
+const junior_analysts = [
+    {
+        first_name: "Aakriti",
+        last_name: "Ramakrishnan",
+        email: "aakriti.ramakrishnan@consultyourcommunity.org",
+        major: "Finance",
+        graduation_year: 2027,
+        linkedin: "https://www.linkedin.com/in/",
+        headshot: "/members/placeholder.jpg",
     },
 ];
 
