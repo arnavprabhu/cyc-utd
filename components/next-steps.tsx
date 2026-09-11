@@ -79,6 +79,12 @@ export default function NextSteps() {
             >
               Meet the team →
             </Link>
+            <Link
+              href="/#network"
+              className="text-primary underline-offset-4 hover:underline"
+            >
+              Where consultants go →
+            </Link>
           </div>
         </FadeIn>
       </div>
