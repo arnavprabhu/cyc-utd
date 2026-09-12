@@ -1,3 +1,5 @@
+import type { Member } from "@/components/profile";
+
 // Executive team members
 const executives = [
     {
@@ -126,10 +128,6 @@ const senior_analysts = [
         linkedin: "https://www.linkedin.com/in/",
         headshot: "/members/rakeen-virani.jpg",
     },
-];
-
-// Junior analyst team members
-const junior_analysts = [
     {
         first_name: "Aakriti",
         last_name: "Ramakrishnan",
@@ -140,5 +138,8 @@ const junior_analysts = [
         headshot: "/members/placeholder.jpg",
     },
 ];
+
+// Junior analyst team members
+const junior_analysts: Member[] = [];
 
 export { executives, senior_analysts, junior_analysts };
