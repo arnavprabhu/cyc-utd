@@ -19,7 +19,7 @@ const executives = [
         major: "Business Administration",
         graduation_year: 2027,
         linkedin: "https://www.linkedin.com/in/akshara-akella/",
-        position: "VP of Growth & Partnerships",
+        position: "VP of Internal Affairs",
         headshot: "/members/akshara-akella.jpg",
     },
     {
