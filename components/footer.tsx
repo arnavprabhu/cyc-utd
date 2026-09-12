@@ -8,7 +8,7 @@ import { Separator } from "@/components/ui/separator";
 const socials = [
   {
     platform: "LinkedIn",
-    href: "https://www.linkedin.com/company/cyc-utd/home/",
+    href: "https://www.linkedin.com/company/cyc-utd/",
     icon: (
       <svg
         className="h-5 w-5"
@@ -22,7 +22,7 @@ const socials = [
   },
   {
     platform: "Instagram",
-    href: "https://www.instagram.com/cycdallas/?igsh=ZzhqeDFpN3JlYnF2",
+    href: "https://www.instagram.com/cycdallas/",
     icon: (
       <svg
         className="h-5 w-5"

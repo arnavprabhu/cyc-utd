@@ -20,8 +20,14 @@ function Contact() {
             {
                 title: "Follow our journey",
                 description: "Stay up to date with project highlights and impact stories.",
-                href: "https://www.linkedin.com/company/cyc-utd/home/",
+                href: "https://www.linkedin.com/company/cyc-utd/",
                 label: "LinkedIn updates",
+            },
+            {
+                title: "Connect on Instagram",
+                description: "See our latest events, chapter updates, and member spotlights.",
+                href: "https://www.instagram.com/cycdallas/",
+                label: "@cycdallas",
             },
         ],
         [],
