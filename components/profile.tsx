@@ -32,26 +32,6 @@ const ProfileSkeleton = () => (
   </div>
 );
 
-const HEADSHOTS_SCALE_2 = [
-  "anas-hassan",
-  "prajeethreddy-bhuma",
-  "arnav-prabhu",
-  "satwik-padhy",
-  "rithik-chowdam",
-  "yuvraj-kashyap",
-  "pranishka-jagtap",
-  "hansini-routhu",
-  "sri-sagiraju",
-  "ayaan-ahmed",
-  "aydin-mahmood",
-  "likhitsaish-kadiam",
-  "srisupraja-vishnubhatla",
-  "rakeen-virani",
-  "akshara-akella",
-  "rushil-kannery",
-  "pranav-boyapati",
-];
-
 const Profile = ({
   first_name,
   last_name,
@@ -63,9 +43,6 @@ const Profile = ({
   headshot,
   tier,
 }: Member) => {
-  const isScale2 =
-    headshot && HEADSHOTS_SCALE_2.some((slug) => headshot.includes(slug));
-
   return (
     <motion.div
       whileHover={{ y: -4 }}
@@ -104,7 +81,7 @@ const Profile = ({
             <AvatarImage
               src={headshot}
               alt={`${first_name} ${last_name}`}
-              className={cn("object-cover", isScale2 && "scale-[2]")}
+              className="object-cover size-full"
               loading="lazy"
               decoding="async"
             />
