@@ -165,9 +165,9 @@ export default function Network() {
                     <Image
                       src={company.logo}
                       alt={`${company.name} logo`}
-                      width={130}
-                      height={52}
-                      className="max-h-10 w-auto max-w-[110px] rounded-md object-contain transition-transform duration-300 group-hover:scale-105"
+                      width={140}
+                      height={56}
+                      className="max-h-12 w-auto max-w-[120px] object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                   <div className="mt-3 text-center">
