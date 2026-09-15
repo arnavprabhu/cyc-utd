@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, CheckCircle2, ShieldCheck, Sparkles, Building2, GraduationCap } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, ShieldCheck, Sparkles, Building2 } from "lucide-react";
 import { motion } from "motion/react";
 
 import { Button } from "@/components/ui/button";
@@ -126,10 +126,6 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="pt-4 border-t border-primary/10 flex flex-wrap gap-x-6 gap-y-3 text-xs sm:text-sm font-medium text-primary/80"
           >
-            <div className="flex items-center gap-2">
-              <GraduationCap className="h-4 w-4 text-accent" />
-              <span>Naveen Jindal School of Management</span>
-            </div>
             <div className="flex items-center gap-2">
               <ShieldCheck className="h-4 w-4 text-accent" />
               <span>100% Zero-Cost Pro Bono</span>
