@@ -1,77 +1,61 @@
 "use client";
 
-import CountUp from "react-countup";
-
-type SocialProof = {
-  metric: number;
-  description: string;
-};
-
-const socialProofs: SocialProof[] = [
-  {
-    metric: 28,
-    description: "University chapters across America",
-  },
-  {
-    metric: 100,
-    description: "Small businesses served per academic year",
-  },
-  {
-    metric: 1000000,
-    description: "Hours of pro bono counsel for community partners",
-  },
-  {
-    metric: 600,
-    description: "Volunteers across the country",
-  },
-];
-
-function SocialProofCard({ metric, description }: SocialProof) {
-  return (
-    <div className="border-t border-white/20 py-7 text-left">
-      <dt className="mb-3 font-serif text-4xl text-white sm:text-5xl">
-        <CountUp
-          end={metric}
-          duration={5}
-          enableScrollSpy={true}
-          scrollSpyOnce={true}
-        />
-        +
-      </dt>
-      <dd className="max-w-[15rem] text-sm leading-6 text-white/65">
-        {description}
-      </dd>
-    </div>
-  );
-}
+import FadeIn from "@/components/ui/fade-in";
+import { ImpactAnalyticsDashboard } from "@/components/bklit/impact-analytics-dashboard";
+import { IndustryBreakdownChart } from "@/components/bklit/industry-breakdown-chart";
+import { ProjectGrowthChart } from "@/components/bklit/project-growth-chart";
+import Link from "next/link";
+import { ArrowRight, BarChart2 } from "lucide-react";
 
 export default function SocialProof() {
   return (
     <section
       id="social-proof"
-      className="relative overflow-hidden bg-primary py-24 text-primary-foreground sm:py-32"
+      className="relative overflow-hidden bg-background py-24 sm:py-32 border-b border-primary/10"
     >
-      <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 rounded-full bg-accent/15 blur-3xl" />
-      <div className="section-shell relative">
-        <div className="mb-14 flex flex-col gap-6 text-left md:flex-row md:items-end md:justify-between">
-          <div className="max-w-xl space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/55">
-              Impact at a glance
-            </p>
-            <h2 className="text-balance text-4xl leading-tight text-white sm:text-5xl">
-              Built on service. Measured by what changes.
-            </h2>
+      <div className="section-shell relative space-y-12">
+        <FadeIn>
+          {/* Header */}
+          <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl space-y-3">
+              <p className="eyebrow">Impact & Quantitative Analytics</p>
+              <h2 className="text-balance text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-primary leading-tight">
+                Built on service. Measured by tangible client outcomes.
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                We combine rigorous academic frameworks with high-velocity problem
+                solving to deliver measurable economic impact for local Dallas-Fort Worth businesses.
+              </p>
+            </div>
+            <div className="shrink-0">
+              <Link
+                href="/impact/"
+                className="inline-flex items-center gap-2 rounded-xl bg-secondary px-4 py-2.5 text-xs sm:text-sm font-semibold text-primary transition-colors hover:bg-secondary/70"
+              >
+                <BarChart2 className="h-4 w-4 text-accent" />
+                <span>Deep-Dive Analytics & Cases</span>
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
           </div>
-          <p className="text-sm leading-6 text-white/65 md:max-w-sm">
-            We combine student talent with community need to deliver outcomes
-            that endure long after each engagement.
-          </p>
-        </div>
-        <dl className="grid grid-cols-1 gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
-          {socialProofs.map((proof, index) => (
-            <SocialProofCard key={index} {...proof} />
-          ))}
-        </dl>
+        </FadeIn>
+
+        {/* 1. Bklit Analytics Dashboard: KPI Cards with Sparklines */}
+        <FadeIn delay={0.1}>
+          <ImpactAnalyticsDashboard />
+        </FadeIn>
+
+        {/* 2. Visual Charts Row: Industry Donut + Growth Chart */}
+        <FadeIn delay={0.2}>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
+            <div className="lg:col-span-6">
+              <IndustryBreakdownChart />
+            </div>
+            <div className="lg:col-span-6">
+              <ProjectGrowthChart />
+            </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
