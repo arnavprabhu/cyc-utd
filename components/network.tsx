@@ -27,7 +27,7 @@ const COMPANIES: CompanyLogo[] = [
   { name: "JP Morgan", logo: "/jp-morgan.svg", industry: "Asset & Wealth Management", category: "finance" },
   { name: "OpenAI", logo: "/openai.svg", industry: "Artificial Intelligence", category: "tech" },
   { name: "Snowflake", logo: "/snowflake.svg", industry: "Cloud Data Architecture", category: "tech" },
-  { name: "Charles Schwab", logo: "/charles-schwab.svg", industry: "Financial Services", category: "finance" },
+  { name: "Charles Schwab", logo: "/charles-schwab.png", industry: "Financial Services", category: "finance" },
   { name: "AT&T", logo: "/att.svg", industry: "Telecommunications Strategy", category: "enterprise" },
   { name: "American Airlines", logo: "/american-airlines.svg", industry: "Aviation & Logistics", category: "enterprise" },
   { name: "HubSpot", logo: "/hubspot.svg", industry: "Enterprise SaaS", category: "tech" },
@@ -167,7 +167,7 @@ export default function Network() {
                       alt={`${company.name} logo`}
                       width={130}
                       height={52}
-                      className="max-h-9 w-auto max-w-[110px] object-contain transition-transform duration-300 group-hover:scale-105"
+                      className="max-h-10 w-auto max-w-[110px] rounded-md object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                   <div className="mt-3 text-center">
