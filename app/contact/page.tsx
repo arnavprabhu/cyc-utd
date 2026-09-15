@@ -1,22 +1,41 @@
 import type { Metadata } from "next";
 import Contact from "@/components/contact";
+import FadeIn from "@/components/ui/fade-in";
+import { AmbientDecor } from "@/components/kokonutui/ambient-decor";
 
 export const metadata: Metadata = {
-    title: "Contact",
-    description: "Get in touch with CYC UT Dallas. Contact us for consulting partnerships, recruitment, or general inquiries.",
+  title: "Contact Us",
+  description:
+    "Get in touch with Consult Your Community at UT Dallas. Contact our executive team for pro-bono consulting inquiries, recruitment questions, or sponsorships.",
 };
 
 export default function ContactPage() {
-    return (
-        <div className="mx-auto max-w-screen-xl px-4 py-20 sm:py-28 lg:px-6">
-            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Contact</p>
-            <h1 className="mt-2 text-4xl font-semibold tracking-tight text-primary sm:text-5xl">Get in touch</h1>
-            <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-                Have a question or want to partner with us? Use our contact form or reach out via email, LinkedIn, or Instagram.
-            </p>
-            <div className="mt-12">
-                <Contact />
+  return (
+    <div className="relative overflow-hidden bg-background">
+      {/* Header */}
+      <section className="relative pt-32 pb-12 sm:pt-40 sm:pb-16 border-b border-primary/10">
+        <AmbientDecor />
+        <div className="section-shell relative z-10">
+          <FadeIn>
+            <div className="max-w-3xl space-y-3">
+              <p className="eyebrow">Connect & Engage</p>
+              <h1 className="text-balance text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-primary leading-tight">
+                Let&apos;s build community momentum together.
+              </h1>
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed pt-1">
+                Whether you are a local business founder looking for pro-bono consulting,
+                a student with questions about joining our cohort, or an organization seeking
+                to collaborate—we want to hear from you.
+              </p>
             </div>
+          </FadeIn>
         </div>
-    );
+      </section>
+
+      {/* Main Contact Flow */}
+      <div className="section-shell">
+        <Contact />
+      </div>
+    </div>
+  );
 }
