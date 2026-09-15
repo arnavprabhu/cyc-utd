@@ -135,7 +135,6 @@ const senior_analysts = [
         major: "Finance",
         graduation_year: 2027,
         linkedin: "https://www.linkedin.com/in/",
-        headshot: "/members/placeholder.jpg",
     },
 ];
 
