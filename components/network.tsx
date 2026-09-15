@@ -29,7 +29,7 @@ const COMPANIES: CompanyLogo[] = [
   { name: "Snowflake", logo: "/snowflake.svg", industry: "Cloud Data Architecture", category: "tech" },
   { name: "Charles Schwab", logo: "/charles-schwab.png", industry: "Financial Services", category: "finance" },
   { name: "AT&T", logo: "/att.svg", industry: "Telecommunications Strategy", category: "enterprise" },
-  { name: "American Airlines", logo: "/american-airlines.svg", industry: "Aviation & Logistics", category: "enterprise" },
+  { name: "American Airlines", logo: "/american-airlines.png", industry: "Aviation & Logistics", category: "enterprise" },
   { name: "HubSpot", logo: "/hubspot.svg", industry: "Enterprise SaaS", category: "tech" },
   { name: "Indeed", logo: "/indeed.svg", industry: "Talent Platforms", category: "tech" },
   { name: "Niantic", logo: "/niantic.svg", industry: "Spatial Computing", category: "tech" },
