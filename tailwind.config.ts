@@ -39,6 +39,18 @@ export default {
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",
+                "utd-green": {
+                    DEFAULT: "#154734",
+                    dark: "#0E2B20",
+                    light: "#1F5F46",
+                    tint: "#E7EFEA",
+                },
+                "utd-orange": {
+                    DEFAULT: "#E87500",
+                    dark: "#C66400",
+                    light: "#FF8C1A",
+                    tint: "#FFF1E5",
+                },
                 chart: {
                     "1": "hsl(var(--chart-1))",
                     "2": "hsl(var(--chart-2))",
@@ -48,6 +60,9 @@ export default {
                 },
             },
             borderRadius: {
+                "2xl": "1rem",
+                "3xl": "1.5rem",
+                "4xl": "2rem",
                 lg: "var(--radius)",
                 md: "calc(var(--radius) - 2px)",
                 sm: "calc(var(--radius) - 4px)",
