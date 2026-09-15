@@ -1,45 +1,65 @@
 "use client";
 
-import { useEffect, useState, useRef, ReactNode } from "react";
+import { ReactNode } from "react";
+import { motion, useReducedMotion } from "motion/react";
 
 type FadeInProps = {
   children: ReactNode;
+  className?: string;
+  delay?: number;
+  duration?: number;
+  direction?: "up" | "down" | "left" | "right" | "none";
+  distance?: number;
 };
 
-function FadeIn({ children }: FadeInProps) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+export default function FadeIn({
+  children,
+  className = "",
+  delay = 0,
+  duration = 0.5,
+  direction = "up",
+  distance = 24,
+}: FadeInProps) {
+  const shouldReduceMotion = useReducedMotion();
 
-  useEffect(() => {
-    const node = ref.current;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 },
-    );
-
-    if (node) {
-      observer.observe(node);
+  const getInitial = () => {
+    if (shouldReduceMotion || direction === "none") {
+      return { opacity: 0 };
     }
+    switch (direction) {
+      case "up":
+        return { opacity: 0, y: distance };
+      case "down":
+        return { opacity: 0, y: -distance };
+      case "left":
+        return { opacity: 0, x: distance };
+      case "right":
+        return { opacity: 0, x: -distance };
+      default:
+        return { opacity: 0 };
+    }
+  };
 
-    return () => {
-      if (node) {
-        observer.unobserve(node);
-      }
-    };
-  }, []);
+  const getAnimate = () => {
+    if (shouldReduceMotion || direction === "none") {
+      return { opacity: 1 };
+    }
+    return { opacity: 1, x: 0, y: 0 };
+  };
 
   return (
-    <div
-      ref={ref}
-      className={`transition-[opacity,transform] duration-500 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"}`}
+    <motion.div
+      initial={getInitial()}
+      whileInView={getAnimate()}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{
+        duration,
+        delay,
+        ease: [0.21, 0.47, 0.32, 0.98],
+      }}
+      className={className}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }
-
-export default FadeIn;
