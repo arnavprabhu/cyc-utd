@@ -1,0 +1,7 @@
+# The site is a static Next.js export (output: "export"); the frontend never calls the
+# FastAPI backend in api/. Keep it out of Vercel deployments so an unauthenticated
+# email-sending endpoint can't go live if SENDGRID/NOTION env vars are ever added.
+api/
+requirements.txt
+docs/
+.env*
